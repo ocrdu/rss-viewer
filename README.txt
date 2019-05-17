@@ -7,6 +7,6 @@ A simple RSS viewer for multiple feeds
 
 A working demo (but a different version) can be found at http://www.den-uijl.nl/news/news.php.
 
-- Note that a small php file is used to get around the same-origin policy.
+- Note that a small php file is used to get around the same-origin policy. If you don't want to do that, don't use this.
 
 If you feel like donating for this, you can do so here: ocrdu.nl/donations.
