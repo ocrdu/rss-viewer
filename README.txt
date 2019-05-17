@@ -1,7 +1,7 @@
 A simple RSS viewer for multiple feeds
 
 - Put everything in a directory on your webserver;
-- Opening rssviewer.html in your browser; it should now show four RSS feeds (from Dutch newspapers);
+- Open rssviewer.html in your browser; it should show four RSS feeds (from Dutch newspapers 8-);
 - You can change or add RSS feeds in the array at the top of the rssviewer.js file;
 - The script will automatically see how many feeds there are, process them, and show them.
 
