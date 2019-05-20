@@ -45,16 +45,20 @@ function newsFeeds() {
               var description = items[i].getElementsByTagName("description")[0].textContent;
               if (description.indexOf("<img") > -1) {description = description.substr(0, description.indexOf("<img"));};
               var link = items[i].getElementsByTagName("link")[0].childNodes[0].nodeValue;
-              var pubDateString = items[i].getElementsByTagName("pubDate")[0].textContent;
-              pubDateString = new Date(pubDateString).toLocaleString();            
-              var pubTime = pubDateString.substr(pubDateString.indexOf(":")-2, 5);
+              var pubTime = "-";
+              try {
+                var pubDateString = items[i].getElementsByTagName("pubDate")[0].textContent;
+                pubDateString = new Date(pubDateString).toLocaleString();            
+                pubTime = pubDateString.substr(pubDateString.indexOf(":")-2, 5);
+              } catch(error) {
+              }                
               stream += "<dl><dt style='float: left'><i>" + pubTime + "</i></dt><dd><a href='" + link + "' target='_blank'><b>" + title + "</b></a></dd></dl>";
               if (!document.getElementById("headingsOnly").checked) {
                 stream += "<p>" + description + "</p><hr>";
               }
             }
           } catch(error) {
-              stream += "<p style='color:red'>Error in RSS feed</p><hr>";
+              stream += "<p style='color:red'>Error in RSS feed" + error + "</p><hr>";
           }
           var id = "n" + n;
           document.getElementById(id).innerHTML = stream;
