@@ -9,4 +9,4 @@ A working demo (but a different version) can be found at http://www.den-uijl.nl/
 
 - Note that a small php file is used to get around the same-origin policy. If you don't want to do that, don't use this.
 
-If you feel like donating for this, you can do so here: ocrdu.nl/donations.
+If you feel like donating for this, you can do so here: http://ocrdu.nl/donations .
